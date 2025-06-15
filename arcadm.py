@@ -18,10 +18,9 @@ class ArcaDM(QMainWindow):
         #final stuff prior to bootup
         self.setCentralWidget(button)
 
-    def exec(self):
-        self.show()
-        self.desktop.exec()
-
 if __name__ == '__main__':
+    app = QApplication(sys.argv)
     desktop = ArcaDM()
-    desktop.exec()
+
+    desktop.show()
+    app.exec()
